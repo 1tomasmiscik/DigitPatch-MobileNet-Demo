@@ -1,0 +1,37 @@
+PS C:\Users\***\Desktop\***\model> python .\eval_all_patches.py --root dataset_split --model models\model_fewshot_near_final2.pth
+>>
+[info] auto-detected splits: ['test', 'train', 'val'] (beriem všetko s '/patches/')
+[info] selected rows: 903 (missing files skipped: 0)
+[info] counts by split: {'test': 93, 'train': 720, 'val': 90}
+C:\Python313\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Python313\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+
+TOTAL samples: 903, Accuracy (ALL PATCHES): 0.9679
+
+Confusion matrix (rows=true, cols=pred):
+  0   0   0   0   0   0   0   0   0   0
+  0 117   0   0   0   0   0   0   0   0
+  0   2 105   0   0   1   0   0   0   0
+  0   0   6  81   0   0   1   0   3   2
+  0   0   0   0  93   0   0   0   0   0
+  0   2   0   0   0 105   2   0   1   2
+  0   0   0   0   0   0  95   0   0   0
+  0   0   0   0   0   1   0 104   0   0
+  0   0   0   2   1   3   0   0  87   0
+  0   0   0   0   0   0   0   0   0  87
+
+Per-class accuracy:
+  class 0: n/a  (0/0)
+  class 1: 1.000  (117/117)
+  class 2: 0.972  (105/108)
+  class 3: 0.871  (81/93)
+  class 4: 1.000  (93/93)
+  class 5: 0.938  (105/112)
+  class 6: 1.000  (95/95)
+  class 7: 0.990  (104/105)
+  class 8: 0.935  (87/93)
+  class 9: 1.000  (87/87)
+
+Class counts: {1: 117, 2: 108, 3: 93, 4: 93, 5: 112, 6: 95, 7: 105, 8: 93, 9: 87}
